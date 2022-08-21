@@ -1,3 +1,5 @@
+<!--CONTACT US-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="icon" type="image/x-icon" href="images\STIRRED FAVICON.png">
  <title>Contact Page</title>
  <style>
      body {font-family: "Times New Roman", Georgia, Serif;}
@@ -29,15 +32,16 @@
 
 
 
-    <ul>
-        <li><a class="active" href="LandingPage.html"> Home </a></li>
+    <ul class="topbar">
+        <li><a class="active" href="Index.html"> Home </a></li>
         <li><a href="Help.html"> Info </a></li>
         <li><a href="Contents.html"> About Us </a> </li>
         <li><a href="Contact.html"> Contact Us </a> </li>
+        <li><a href="Recipes.html"> Recipes </a></li>
     </ul>
     
     <style>
-        ul {
+        ul.topbar {
             background-color: #F5E8C7;
             list-style-type: none;
             margin: 0;
@@ -46,11 +50,11 @@
             align-items: center;
           }
           
-          li {
+          .topbar li {
             float: left;
           }
           
-          li a {
+          .topbar li a {
             display: block;
             color: #9E7777;
             text-align: center;
@@ -62,7 +66,7 @@
           }
           
           /* Change the link color on hover */
-          li a:hover {
+          .topbar li a:hover {
             background-color: #6F4C5B;
             color: #F5E8C7;
           }
@@ -93,12 +97,12 @@
     font-family: 'Times New Roman', Times, serif;
   }
   input{
-    background-color: #9E7777;
+    background-color: #F5E8C7;
     border-color: #F5E8C7;
-    color: #3f2933;
     font-size: medium;
   }
 </style>
+
 <br><br>
 <form>
   <label for="name">Name:</label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
@@ -112,8 +116,10 @@
   <label for="contact">Contact Number:</label>&emsp;&emsp;
   <input type="text" id="contact" name="contact">
   <br><br>
-  <label for="comment">Suggestion:</label>&emsp;&emsp;&emsp;&emsp;&nbsp;
-  <input type="text" id="comment" name="comment">
+  <label for="comment">Suggestion:</label>&emsp;&emsp;
+  <div>
+    <textarea id="comment" name="comment" style="height: 300px; width: 1000px; background-color: #F5E8C7;"" maxlength="3000" placeholder="Enter suggestion of 2000 words approximately"></textarea>
+  </div>
   <br><br><br><br>
   <input type="submit" value="Submit">
 
