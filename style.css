@@ -1,0 +1,198 @@
+
+
+body{
+    margin: 0cm;
+    padding: 0cm;
+}
+
+h1{
+    font-family: 'Playfair Display';
+    font-weight: 1;
+    
+  }
+
+.topbar{
+    background-color: #F5E8C7;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden;
+    align-items: left;
+    color: #9E7777;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+}
+
+.topbar ul{
+    display: inline-block;
+    background-color: #F5E8C7;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+    color: #9E7777;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+    
+.topbar li {
+    margin-top: 35px;
+    margin-left: 15px;
+    float: left;
+    color: #9E7777;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 5px;
+    margin-left: 12px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+    
+.topbar li a {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    padding: 36px;
+    color: #9E7777;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+    
+/* Change the link color on hover */
+.topbar li a:hover {
+    background-color: #6F4C5B;
+    color: #F5E8C7;
+}
+
+.topbar ul ul {
+    display: inline-block;
+    background-color: #F5E8C7;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+    color: #9E7777;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.topbar ul ul li{
+    list-style-type: none;
+    color: #9E7777;
+    line-height: 65px;
+    display: none;
+}
+
+.topbar ul ul li a{
+    line-height: 50px;
+    display: block;
+  }
+
+/* Left-aligned image link - logo*/
+.topbar img.left {
+    float: left;
+    height: 60px;
+    width: 60px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 8px;
+    border-radius: 30px;
+
+}
+
+footer {
+    margin: 0;
+    margin-right: 0px;
+    background-color: #6f4c5b;
+    color:#F5E8C7;
+    display: block;
+    font-size: medium;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 0.5em;
+    padding-top: 4em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 1;
+    width: inherit;
+}
+
+footer a{
+    text-decoration: none;
+    color: #F5E8C7;
+}
+
+footer a:hover{
+    color: midnightblue;
+    text-decoration: underline;
+}
+
+
+
+
+/* DROPDOWN */
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+.dropdown .dropbtn {
+    color: #9E7777;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 5px;
+    margin-left: 12px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+
+    background-color: #F5E8C7;
+    border: none;
+    outline: none;
+    padding: 36px;
+    margin: 0; 
+  }
+  
+  .topbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #6F4C5B;
+    color: #F5E8C7;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F5E8C7;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: #6F4C5B;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #6F4C5B;
+    color: #F5E8C7;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

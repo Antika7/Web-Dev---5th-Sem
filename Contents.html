@@ -6,7 +6,13 @@
 <head>
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="style.css">
+ <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+ <!--fonts-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  <link rel="icon" type="image/x-icon" href="images\STIRRED FAVICON.png">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,21 +20,30 @@
 
 <style>
     body {font-family: "Times New Roman", Georgia, Serif;}
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Playfair Display";
+    h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display';
+      font-weight: 400;
+      
     }
 </style>
 </head>
 
     <ul class="topbar">
-        <li><a class="active" href="index.html"> Home </a></li>
+        <a href="index.html"><img src="images\STIRRED FAVICON.png" class="left" ></img></a>
+        <li><a href="index.html"> Home </a></li>
         <li><a href="Recipes.html"> Recipes </a></li>
-        <li><a href="Help.html"> Info </a></li>
+        <div class="dropdown">
+            <button class="dropbtn">Info</button>
+            <div class="dropdown-content">
+              <a href="Help.html">Measurements</a>
+              <a href="Promotions.html">Equipments</a>
+            </div>
+        </div>
         <li><a href="Contents.html"> About Us </a> </li>
         <li><a href="Contact.html"> Contact Us </a> </li>
     </ul>
     
-    <style>
+    <!--<style>
         ul.topbar {
             background-color: #F5E8C7;
             list-style-type: none;
@@ -38,7 +53,7 @@
             align-items: center;
           }
           
-         .topbar li {
+          .topbar li {
             float: left;
           }
           
@@ -58,7 +73,10 @@
             background-color: #6F4C5B;
             color: #F5E8C7;
           }
-    </style>
+          p{
+            font-size: medium;
+          }
+    </style>-->
 
 <body bgcolor="DEBA9D">
 
@@ -70,6 +88,7 @@
          
         h1 {
             color: #6F4C5B;
+            font-family: 'Playfair Display', serif; ;
         }
     </style>
 <h1 style="letter-spacing: 00.2em ; font-size: 4rem; text-align:center ; color : #6f4c5b">About Us</h1>
@@ -99,28 +118,9 @@
 
 <p>Some more details about me.<br> More details....</p>
 
-<!-- <script>
-    function showPosition() {
-        navigator.geolocation.getCurrentPosition(showMap);
-    }
-    
-    function showMap(position) {
-        // Get location data
-        var latlong = position.coords.latitude + "," + position.coords.longitude;
-        
-        // Set Google map source url
-        var mapLink = "https://maps.googleapis.com/maps/api/staticmap?center="+latlong+"&zoom=16&size=400x300&output=embed";
-        
-        // Create and insert Google map
-        document.getElementById("embedMap").innerHTML = "<img alt='Map Holder' src='"+ mapLink +"'>";
-    }
-</script>
-<button type="button" onclick="showPosition();">Show My Position on Google Map</button>
-    <div id="embedMap">
-    </div> -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.3042529007755!2d77.60659465273788!3d12.932865099016368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15ad48c063cb%3A0xe00713179b157beb!2sShree%20hostel%20for%20ladies!5e0!3m2!1sen!2sin!4v1661754717076!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1558.7864293344553!2d30.31276062657491!3d59.94093205061274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963110eb25adbd%3A0x214f8f2811596776!2sWinter%20Palace!5e0!3m2!1sen!2sin!4v1662978129202!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<br>
+<br><br>
 
 <!--FOOTER-->
 <footer>
@@ -132,8 +132,10 @@
     <i class="material-icons">copyright</i> &nbsp; Antika Pvt Ltd.
   </footer>
 
-<style>
+<!--<style>
     footer {
+        margin: 0;
+        margin-right: 0;
         background-color: #6f4c5b;
         color:#F5E8C7;
         display: block;
@@ -145,8 +147,9 @@
         padding-bottom: 0.5em;
         padding-top: 4em;
         font-family: 'Times New Roman', Times, serif;
+        width: inherit;
     }
-</style>
+</style>-->
 
 </body>
 

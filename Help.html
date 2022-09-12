@@ -7,7 +7,13 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="style.css">
+ <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  <link rel="icon" type="image/x-icon" href="images\STIRRED FAVICON.png">
  <title>Info Page</title>
@@ -22,14 +28,21 @@
 </head>
 
 <ul class="topbar">
-    <li><a class="active" href="index.html"> Home </a></li>
-    <li><a href="Recipes.html"> Recipes </a></li>
-    <li><a href="Help.html"> Info </a></li>
-    <li><a href="Contents.html"> About Us </a> </li>
-    <li><a href="Contact.html"> Contact Us </a> </li>
+  <a href="index.html"><img src="images\STIRRED FAVICON.png" class="left" ></img></a>
+  <li><a href="index.html"> Home </a></li>
+  <li><a href="Recipes.html"> Recipes </a></li>
+  <div class="dropdown">
+      <button class="dropbtn">Info</button>
+      <div class="dropdown-content">
+        <a href="Help.html">Measurements</a>
+        <a href="Promotions.html">Equipments</a>
+      </div>
+  </div>
+  <li><a href="Contents.html"> About Us </a> </li>
+  <li><a href="Contact.html"> Contact Us </a> </li>
 </ul>
 
-<style>
+<!-- <style>
       ul.topbar {
         background-color: #F5E8C7;
         list-style-type: none;
@@ -59,7 +72,7 @@
         background-color: #6F4C5B;
         color: #F5E8C7;
       }
-</style>
+</style> -->
 
 <body bgcolor="DEBA9D">
 
@@ -67,7 +80,6 @@
 <style>
   h1{
     font-size: 4rem;
-    font-family: 'Times New Roman', Times, serif;
     color: #6F4C5B;
     text-align: center;
     letter-spacing: 0.2em;
@@ -79,7 +91,7 @@
 </br></br></br>
 
 <!--CONTENTS-->
-<h3 style="color: #6F4C5B; text-align: center; background-color: #9E7777; font-size: 24px;">CONTENTS</h3>
+<!-- <h3 style="color: #6F4C5B; text-align: center; background-color: #9E7777; font-size: 24px;">CONTENTS</h3> -->
 <style>
   ul.contentul{
     font-size: 18px ;
@@ -97,6 +109,7 @@
 
   .contentul a{
     text-decoration: none;
+    color: #F5E8C7;
   }
 
   .contentul li a:hover{
@@ -110,8 +123,17 @@
     margin: 0 auto;
     }
 
+    .contentul .heading{
+      font-size: 30px;
+      margin-bottom: 9px;
+      letter-spacing: 4.5px;
+      text-decoration: overline;
+
+    }
+
 </style>
 <ul class="contentul card">
+  <li class="heading">CONTENTS</li>
   <li><a href="#table1">Grams to Cups Conversion</a></li>
   <li><a href="#table2">Cups to Ounces Conversion</a></li>
   <li><a href="#audio1">50 Tips to Cooking</a></li>
@@ -222,10 +244,12 @@
 <!--AUDIO-->
 <div id="audio1" slot="audio1" style="align-items: center;">
 <h3>50 tips to cooking</h3>
-<audio src="audio\50 Cooking Tips With Gordon Ramsay _ Part Two.mp3" controls style="align-content: center;">
+<audio src="audio\50 Cooking Tips With Gordon Ramsay _ Part Two.mp3" controls style="align-content: center; margin-left: 40%;">
   <p>If you are reading this, it is because your browser does not support the audio element.</p>
   </audio>
 </div>
+
+<br><br>
 
 <!--FOOTER-->
 <footer>
@@ -237,7 +261,7 @@
   <i class="material-icons">copyright</i> &nbsp; Antika Pvt Ltd.
 </footer>
 
-<style>
+<!-- <style>
   footer {
       background-color: #6f4c5b;
       color:#F5E8C7;
@@ -251,7 +275,7 @@
       padding-top: 4em;
       font-family: 'Times New Roman', Times, serif;
   }
-</style>
+</style> -->
 
 </body>
 </html>
