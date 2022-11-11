@@ -1,7 +1,63 @@
 <!--INFO-->
 
-<!DOCTYPE html>
-<html lang="en">
+<?php
+
+    $cupsErr = "";
+    $cups = "";
+    $gramsErr = "";
+    $grams = "";
+
+    
+
+    if(isset($_POST['Convert']))
+    {
+      $convtype = $_POST['Convert'];
+      // table 2
+      if($convtype == "Convert To Ounces")
+      {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") 
+        {
+          if (empty($_POST["cups"])) 
+          {
+            $cupsErr = "Value is required";
+          }
+          else 
+          {
+            $cups = test_input($_POST["cups"]) * 8;
+          }
+        }
+      }
+
+      // table 1
+      if($convtype == "Convert To Cups")
+      {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") 
+        {
+          if (empty($_POST["grams"])) 
+          {
+            $gramsErr = "Value is required";
+          }
+          else 
+          {
+            $grams = test_input($_POST["grams"]) /236.5 ;
+          }
+        }
+      }
+    }
+
+        function test_input($data) 
+        {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+          return $data;
+        }
+    
+
+?>
+
+<!DOCTYPE html> 
+<html lang="en"> 
 
 <head>
  <meta charset="UTF-8">
@@ -34,7 +90,7 @@
   <div class="dropdown">
       <button class="dropbtn">Info</button>
       <div class="dropdown-content">
-        <a href="Help.html">Measurements</a>
+        <a href="Help.php">Measurements</a>
         <a href="Promotions.html">Equipments</a>
       </div>
   </div>
@@ -183,6 +239,11 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-color: #6f4c5b;
   }
+
+  form{
+    margin-left: 40%;
+    color: #F5E8C7;
+  }
 </style>
 
 </br></br>
@@ -215,6 +276,31 @@
     </tr>
 
   </table>
+
+  <br><br>
+
+  <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+  <table>
+    <tr>
+      <td><label for="grams">ENTER GRAMS: </label> </td>
+      <td><input type="number" id="grams" name="grams" /></td>
+      <td><input type="submit" name="Convert" value="Convert To Cups"> </td>
+    </tr>
+    <tr>
+      <td>
+        <?php
+         echo ("CUPS: ");
+        ?>
+    </td>
+    <td>
+      <?php
+      echo("$grams")
+      ?>
+    </td>
+    </tr>
+  </table>
+</form> 
+
 </div>
 
 </br></br>
@@ -251,6 +337,33 @@
     </tr>
 
   </table>
+
+<br><br>
+
+  <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+  <table>
+    <tr>
+      <td><label for="cups">ENTER CUPS: </label> </td>
+      <td><input type="number" id="cups" name="cups" /></td>
+      <td><input type="submit" name="Convert" value="Convert To Ounces"> </td>
+    </tr>
+    <tr>
+      <td>
+        <?php
+         echo ("OUNCES: ");
+        ?>
+    </td>
+    <td>
+      <?php
+      echo("$cups")
+      ?>
+    </td>
+    </tr>
+  </table>
+</form> 
+
+  
+
 </div>
 
 </br></br>
